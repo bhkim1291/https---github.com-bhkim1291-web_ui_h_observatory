@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery vagas 라이브러리 활용</title>
+    <link rel="stylesheet" href="css/vg.css">
+    <link rel="stylesheet" href="css/vegas.min.css">
+</head>
+<body>
+    <div id="content">
+            <strong>
+                <!-- 홈페이지에 들어가기 위한 링크 생성 -->
+                <a href="html/대한천문대 homepage.html">
+                <h1>아름다운 밤하늘 여행</h1>
+                </a>
+            </strong>
+        <p>
+            밤하늘의 별자리 따라 <br> 떠나는 신비로운 이야기.
+        </p>
+    </div>
+    <script src="javascript/jquery-2.2.4.min.js"></script>
+    <script src="javascript/vegas.min.js"></script>
+    <script>
+
+        //             $('body').vegas({
+//     delay: 3000,
+//     slides: [
+//         { src: '/images/nature-1.jpg' },
+//         { src: '/images/nature-2.jpg' },
+//         { src: '/images/nature-3.jpg' },
+//     ]
+// });
+        $(function(){
+        $('body').vegas({
+            slides: [//이미지를 할당하여 vagas가 구동이 되도록 경로를 지정
+                {   src: 'images/vagas1.jpg' },
+                {   src: 'images/vagas2.jpg' },
+                {   src: 'images/vagas3.jpg' },
+                {   src: '.videos/sea.jpg',
+                    video: {
+                        src: [
+                            'videos/sea.mp4',
+                        ],
+                        mute: true
+                    }
+                }
+            ]
+        });
+        });
+    </script>
+</body>
+</html>
